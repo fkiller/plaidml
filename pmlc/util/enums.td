@@ -62,6 +62,7 @@ def InterpolationMode : I64EnumAttr<
      I64EnumAttrCase<"nearest", 0>,
      I64EnumAttrCase<"linear", 1>,
      I64EnumAttrCase<"cubic", 2>,
+     I64EnumAttrCase<"none", 3>,
     ]> {
   let cppNamespace = "pmlc::util";
 }
@@ -75,6 +76,7 @@ def NearestMode : I64EnumAttr<
      I64EnumAttrCase<"floor", 2>,
      I64EnumAttrCase<"ceil", 3>,
      I64EnumAttrCase<"simple", 4>,
+     I64EnumAttrCase<"none", 5>,
     ]> {
   let cppNamespace = "pmlc::util";
 }
@@ -85,6 +87,16 @@ def GatherMode : I64EnumAttr<
     [
       I64EnumAttrCase<"normal", 0>,
       I64EnumAttrCase<"nd", 1>,
+    ]> {
+  let cppNamespace = "pmlc::util";
+}
+
+def PaddingMode : I64EnumAttr<
+    "PaddingMode",
+    "Padding mode",
+    [
+      I64EnumAttrCase<"edge", 0>,
+      I64EnumAttrCase<"zero", 1>,
     ]> {
   let cppNamespace = "pmlc::util";
 }
